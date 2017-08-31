@@ -16,10 +16,6 @@ module.exports = {
     },
     module: {
         rules: [
-            { 
-                test: /\.js$/, 
-                loader: 'js-loader' 
-            },
             {   
                 test: /\.scss$/, 
                 use: [
@@ -35,7 +31,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.join(__dirname, "src"),
         compress: false,
         port: 9000,
     }
