@@ -5,7 +5,9 @@
     <title>Angularjs course</title>
   </head>
   <body>
-    <p>Nothing here {{'yet' + '!'}}</p>
+    <div ng-controller="RootController as root">
+        {{ root.title }}
+    </div>
 
     <script src="bundle.js"></script>
   </body>
