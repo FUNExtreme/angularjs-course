@@ -1,9 +1,6 @@
 import * as angular from 'angular';
+import { RootController } from './app/root.controller';
 
 var app = angular.module('app', []);
 
-function RootController() {
-    var vm = this;
-    vm.title = 'Now there is something';
-}
-app.controller("RootController", RootController); 
+app.controller(RootController.iid, RootController); 
