@@ -1,3 +1,21 @@
+strong {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style: disc;
+    list-style-position: inside;
+    text-indent: 2rem;
+}
+li {
+    cursor: pointer;
+}
+
 html {
     font-size: 62.5%;
 }
