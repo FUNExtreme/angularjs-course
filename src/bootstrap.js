@@ -1,3 +1,6 @@
+import "./assets/css/reset.css";
+import "./assets/css/layout.css";
+
 import * as angular from 'angular';
 import { RootController } from './app/root.controller';
 import { PizzeriaController } from './app/pizzeria.controller';

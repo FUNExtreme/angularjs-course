@@ -5,14 +5,24 @@
     <title>Angularjs course</title>
   </head>
   <body>
-    <div ng-controller="RootController as root">
+    <header>
+      <div ng-controller="RootController as root">
         {{ root.title }}
-    </div>
+      </div>
+    </header>
 
-    <div ng-controller="PizzeriaController as pizzeriaController">
-        {{ pizzeriaController.pizzas }}
-    </div>
+    <div class="page-container">
+      <aside class="pizza-sidebar">
+        <p class="slogan">Do you want a pizza me?</p>
+      </aside>
 
+      <div class="content">
+        <div ng-controller="PizzeriaController as pizzeriaController">
+            {{ pizzeriaController.pizzas }}
+        </div>
+      </div>
+    </div>
+      
     <script src="bundle.js"></script>
   </body>
 </html>

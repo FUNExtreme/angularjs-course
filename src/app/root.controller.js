@@ -1,5 +1,5 @@
 export function RootController() {
     var vm = this;
-    vm.title = 'Now there is something';
+    vm.title = 'AngularJS Course';
 }
 RootController.iid = "RootController";

@@ -17,16 +17,20 @@ module.exports = {
     module: {
         rules: [
             {   
-                test: /\.scss$/, 
+                test: /\.css$/, 
                 use: [
                     "style-loader",
-                    "css-loader",
-                    "sass-loader" 
+                    "css-loader"
                 ]
             },
             { 
                 test: /\.html$/, 
                 loader: 'html-loader'
+            },
+            {
+                test: /\.png$/,
+                loader: "url-loader",
+                query: { mimetype: "image/png" }
             }
         ]
     },
