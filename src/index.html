@@ -28,6 +28,18 @@
             <p><strong>Name:</strong> {{ pizzeriaController.selectedPizza.name }}</p>
             <p><strong>Description:</strong> {{ pizzeriaController.selectedPizza.description }}</p>
           </div>
+
+          <hr>
+          <div class="pizza-new">
+            <h2>New pizza: </h2>
+            <form name="pizzeriaController.newPizzaForm" novalidate>
+              <label>
+                  Name:
+                  <input type="text" ng-model="pizzeriaController.newPizza.name" name="name" />
+              </label>
+            </form>
+            {{ pizzeriaController.newPizzaForm }}
+          </div>
         </div>
       </div>
     </div>
