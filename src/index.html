@@ -18,7 +18,16 @@
 
       <div class="content">
         <div ng-controller="PizzeriaController as pizzeriaController">
-            {{ pizzeriaController.pizzas }}
+          <h2>Pizza choices:</h2>
+          <ul>
+            <li ng-repeat="pizza in pizzeriaController.pizzas" ng-click="pizzeriaController.onPizzaClick(pizza)">{{ pizza.name }}</li>
+          </ul>
+        
+          <div class="pizza-info" ng-show="pizzeriaController.selectedPizza">
+            <h2>Selected pizza: </h2>
+            <p><strong>Name:</strong> {{ pizzeriaController.selectedPizza.name }}</p>
+            <p><strong>Description:</strong> {{ pizzeriaController.selectedPizza.description }}</p>
+          </div>
         </div>
       </div>
     </div>
