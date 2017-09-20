@@ -20,6 +20,17 @@ export function PizzaService() {
                 ingredients: ["pineapple", "cheese"]
             }
         ]
+    };
+
+    this.getIngredients = function() {
+        return [
+            {
+                name: 'Cheese'
+            },
+            {
+                name: 'Salami'
+            }
+        ]
     }    
 }
 PizzaService.iid = "PizzaService";

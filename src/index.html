@@ -33,12 +33,43 @@
           <div class="pizza-new">
             <h2>New pizza: </h2>
             <form name="pizzeriaController.newPizzaForm" novalidate>
-              <label>
-                  Name:
-                  <input type="text" ng-model="pizzeriaController.newPizza.name" name="name" />
-              </label>
+              <div>
+                <label>
+                    Name:
+                    <input type="text" ng-model="newPizza.name" name="name" />
+                </label>
+              </div>
+              <div>
+                <label>
+                    Description:
+                    <input type="textarea" ng-model="newPizza.description" name="description" />
+                </label>
+              </div>
+              <div>
+                <label ng-repeat="ingredient in pizzeriaController.ingredients">
+                  <input
+                    type="checkbox"
+                    name="selectedFruits[]"
+                    value="{{ingredient.name}}"
+                    ng-model="ingredient.selected"> 
+                    {{ingredient.name}}
+                </label>
+              </div>
+              <div>
+                <label>
+                    Base Price:
+                    <select ng-model="newPizza.basePrice" name="basePrice">
+                      <option value="">--- Please select ---</option>
+                      <option value="5">5 euro</option>
+                      <option value="6.5">6.5 euro</option>
+                      <option value="8">8euro </option>                    
+                    </select>
+                </label>
+              </div>
+              <div>
+                <input type="submit" ng-click="pizzeriaController.onAddPizza(newPizza)" />
+              </div>
             </form>
-            {{ pizzeriaController.newPizzaForm }}
           </div>
         </div>
       </div>
