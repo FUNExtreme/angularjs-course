@@ -10,6 +10,8 @@ import { PizzaService } from './app/pizza.service';
 
 import { RealPizzasOnlyFilter } from './app/realPizzasOnly.filter';
 
+import { FocusDirective } from './app/focus.directive';
+
 
 var app = angular.module('app', []);
 
@@ -19,3 +21,5 @@ app.controller(PizzeriaController.iid, PizzeriaController);
 app.service(PizzaService.iid, PizzaService);
 
 app.filter(RealPizzasOnlyFilter.iid, RealPizzasOnlyFilter);
+
+app.directive(FocusDirective.iid, FocusDirective);

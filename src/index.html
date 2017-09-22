@@ -36,7 +36,7 @@
               <div>
                 <label>
                     Name:
-                    <input type="text" name="name" ng-model="newPizza.name" required />
+                    <input type="text" name="name" ng-model="newPizza.name" required focus />
                 </label>
                 <div ng-show="pizzeriaController.newPizzaForm.$submitted || pizzeriaController.newPizzaForm.name.$touched">
                   <span ng-show="pizzeriaController.newPizzaForm.name.$error.required">Give your pizza a name.</span>

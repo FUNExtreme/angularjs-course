@@ -12,7 +12,6 @@ export function PizzeriaController(pizzaService) {
         console.log(vm.ingredients);
         for(var x = 0; x < vm.ingredients.length; x ++) {
             if(vm.ingredients[x].selected) {
-                console.log("selected");
                 return true;
             }
         }
@@ -31,8 +30,6 @@ export function PizzeriaController(pizzaService) {
                 newPizza.ingredients.push(vm.ingredients[x].name);
             }
         }
-
-        console.log(newPizza);
     };
 }
 PizzeriaController.iid = "PizzeriaController";
